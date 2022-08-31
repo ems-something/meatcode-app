@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { FrontContainer, Nav, ArticleContainer, Title } from "./components";
+import { FrontContainer, Nav, ArticleContainer, Title, Form } from "./components";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import useArticles from "./hooks/useArticles";
@@ -48,6 +48,14 @@ function App() {
               <div className="articles-searcher__right">
                 <ArticleContainer articles={articles} />
               </div>
+            </div>
+          </section>
+          <section className="section-container">
+            <header>
+              <Title title="Contáctanos" />
+            </header>
+            <div className="form-container">
+              <Form />
             </div>
           </section>
         </main>
