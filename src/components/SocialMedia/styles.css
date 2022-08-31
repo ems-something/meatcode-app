@@ -1,0 +1,29 @@
+:root {
+    --social-color: #000000;
+}
+  
+.social-media__container {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+  
+.social-media__link {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--social-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+  
+.social-media__link:hover {
+    transform: scale(1.1);
+}
+  
+.icon-container {
+    color: var(--social-color);
+    font-size: 25px;
+}
