@@ -10,3 +10,12 @@
     display: grid;
     place-items: center;
 }
+
+/* Moviles */
+@media (max-width: 768px) {
+    .articles-container {
+        display: inline-flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+  }

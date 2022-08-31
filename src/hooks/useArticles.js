@@ -16,13 +16,15 @@ export default function useArticles() {
         if (filter === "Todos")
             axios.get(baseUrl)
                 .then((res) => {
-                    setArticles(res);
+                    const data = res.data;
+                    setArticles(data);
                 })
                 .catch(error => console.error(""));
         else {
             axios.get(`${baseUrl}?filter=${filter}`)
                 .then((res) => {
-                    setArticles(res);
+                    const data = res.data;
+                    setArticles(data);
                 })
                 .catch(error => console.error(""));
         }

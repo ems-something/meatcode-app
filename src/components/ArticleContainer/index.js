@@ -1,5 +1,5 @@
 import React from "react";
-import { Article } from "../";
+import Article from "../Article";
 import Spinner from 'react-bootstrap/Spinner';
 import "./styles.css";
 
@@ -14,7 +14,7 @@ function ArticleContainer({ articles = [] }) {
         </div>
         ) : (
         <div className="articles-container__loader">
-            <Spinner />
+            
         </div>
         );
 }

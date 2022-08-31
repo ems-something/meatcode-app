@@ -6,7 +6,7 @@
   align-items: center;
   flex-direction: column;
 }
-.tiles-searcher {
+.articles-searcher {
   display: flex;
   gap: 10px;
   padding: 100px 100px;
@@ -14,13 +14,29 @@
 .form-container {
   margin-top: 20px;
 }
-.tiles-searcher__left {
+.articles-searcher__left {
   position: sticky;
   top: 100px;
   height: min-content;
   width: 20vw;
 }
-.tiles-searcher__right {
+.articles-searcher__right {
   width: 60vw;
   height: min-content;
+}
+
+/* Moviles */
+@media (max-width: 768px) {
+  .articles-searcher {
+    display: grid;
+    padding: 50px 50px;
+  }
+  .articles-searcher__left {
+    position: relative;
+    top: 0px;
+  }
+
+  .articles-searcher__right {
+    position: relative;
+  }
 }

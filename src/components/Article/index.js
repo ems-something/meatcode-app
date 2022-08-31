@@ -1,28 +1,40 @@
-import React, { useState } from "react";
-import Card from 'react-bootstrap/Card';
+import React, { useState, useEffect } from "react";
 import Spinner from 'react-bootstrap/Spinner';
 import "./styles.css";
 
 function Article({ artInfo }) {
-    const { cat, title, img, content, url, createdAt, id } = artInfo;
-    const [loaded, setLoaded] = useState(true);
+  const { category, title, image, content, url, createdAt, id } = artInfo;
+  let [_category, setCategory] = useState(category);
+  const [loaded, setLoaded] = useState(true);
+  const [_img, setImg] = useState();
 
-    return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={image} onLoad={() => setLoaded(false)} />
-            {loaded ? (
-            <div className="article-container__loader">
-                <Spinner />
-            </div>
-            ) : (
-            <></>
-            )}
-            <Card.Body>
-                <Card.Title>{title}</Card.Title>
-                <Card.Text>{content}</Card.Text>
-            </Card.Body>
-        </Card>
-    );
+  return (
+    <article className="card-container" id={id}>
+      <div className="car-container__img-container">
+        <img
+          className="card-container__img"
+          src={image}
+          onLoad={() => setLoaded(false)}
+        />
+        {loaded ? (
+          <div className="article-container__loader">
+            
+          </div>
+        ) : (
+          <></>
+        )}
+      </div>
+      <div className="card-container__text">
+        <header className="card-container__header">
+          <h3>{title}</h3>
+        </header>
+        <p>{content}</p>
+      </div>
+      <a className="card-container__see-more" href={url} target="_blank">
+        VER MÁS
+      </a>
+    </article>
+  );
 }
 
 export default Article;
