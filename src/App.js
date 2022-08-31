@@ -1,6 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
-import { FrontContainer, Nav, ArticleContainer } from "./components";
+import { FrontContainer, Nav, ArticleContainer, Title } from "./components";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import useArticles from "./hooks/useArticles";
@@ -16,7 +16,9 @@ function App() {
         </header>
         <main>
           <section className="section-container">
-            
+            <header>
+              <Title title="Nuestros Artículos" />
+            </header>
             <div className="articles-searcher">
 
               <div className="articles-searcher__left">
