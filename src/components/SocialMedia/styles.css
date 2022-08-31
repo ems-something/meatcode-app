@@ -27,3 +27,10 @@
     color: var(--social-color);
     font-size: 25px;
 }
+
+/* Moviles */
+@media (max-width: 768px) {
+    .social-media__container {
+        flex-direction: column;
+    }
+}

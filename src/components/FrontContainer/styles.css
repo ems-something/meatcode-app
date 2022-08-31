@@ -1,0 +1,75 @@
+.front-image__container {
+    background-image: url("../../assets/img/hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 95vh;
+}
+
+.front-image__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: cover;
+    padding-top: 30px;
+    padding-left: 90px;
+    padding-right: 70px;
+}
+
+.front-image__text-styled {
+    position: absolute;
+    top: 35%;
+}
+
+.front-image__text {
+    position: absolute;
+    left: 100px;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 8vw;
+    font-weight: 700;
+    width: 33vw;
+    line-height: 7vw;
+    z-index: 10;
+}
+
+.front-image__brush {
+    position: absolute;
+    width: 100vw;
+    transform: rotate(2.4deg) translateY(20px) translateX(-80%);
+    z-index: -1;
+}
+
+.logo-container {
+    margin: 0;
+    padding: 0;
+    width: 150.53px;
+    height: 90px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.logo-container:hover {
+    transform: rotateZ(-3.5deg) scale(1.1);
+}
+
+.logo-container > * {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-primary);
+    font-size: 80px;
+    color: var(--color-black);
+}
+
+
+/* Moviles */
+@media (max-width: 768px) {
+    .front-image__header {
+        padding-right: 10px;
+    }
+    .front-image__container {
+        height: 60vh;
+    }
+}

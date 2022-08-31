@@ -1,5 +1,5 @@
 import React from "react";
-import SocialIcon from "./components/SocialIcon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./styles.css";
 
 function SocialMedia({ socials = [{ url: "", icon: "", color: "#FFFFFF" }] }) {
