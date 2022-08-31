@@ -1,0 +1,12 @@
+.articles-container {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+  
+.articles-container__loader {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
