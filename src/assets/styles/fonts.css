@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Open Sans";
+    src: url("../fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat/static/Caveat-Regular.ttf");
+}
+  
+:root {
+    --font-primary: "Caveat";
+    --font-secondary: "Open Sans";
+}
+  
