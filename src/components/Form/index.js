@@ -33,6 +33,8 @@ export default function Form() {
                 errorName ? "form-container__input--error" : ""
                 }`}
             />
+            {errorName && 
+                <span className='error-msg'>Nombre mal compuesto</span>}
             </label>
             <label>
             APELLIDO
@@ -44,6 +46,8 @@ export default function Form() {
                 errorLastName ? "form-container__input--error" : ""
                 }`}
             />
+            {errorLastName && 
+                <span className='error-msg'>Appellido mal compuesto</span>}
             </label>
         </div>
         <div className="form-container__section">
@@ -57,6 +61,8 @@ export default function Form() {
                 errorEmail ? "form-container__input--error" : ""
                 }`}
             />
+            {errorEmail && 
+                <span className='error-msg'>Email Inválido</span>}
             </label>
             <label>
             TELEFONO
@@ -68,6 +74,8 @@ export default function Form() {
                 errorPhone ? "form-container__input--error" : ""
                 }`}
             />
+            {errorPhone && 
+                <span className='error-msg'>Telefono Inválido</span>}
             </label>
         </div>
         <input
