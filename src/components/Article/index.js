@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import 'bootstrap/dist/css/bootstrap.css'
 import Spinner from 'react-bootstrap/Spinner';
 import "./styles.css";
 
@@ -16,7 +17,7 @@ function Article({ artInfo }) {
         />
         {loaded ? (
           <div className="article-container__loader">
-            
+              <Spinner animation="border" variant="warning"/>
           </div>
         ) : (
           <></>
