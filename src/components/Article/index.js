@@ -4,9 +4,7 @@ import "./styles.css";
 
 function Article({ artInfo }) {
   const { category, title, image, content, url, createdAt, id } = artInfo;
-  let [_category, setCategory] = useState(category);
   const [loaded, setLoaded] = useState(true);
-  const [_img, setImg] = useState();
 
   return (
     <article className="card-container" id={id}>

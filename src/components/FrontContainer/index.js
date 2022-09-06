@@ -12,7 +12,7 @@ function FrontContainer() {
     return (
         <div className="front-image__container">
             <header className="front-image__header">
-                <div className="front-image__logo">
+                <div>
                     <div className="logo-container">
                         <h1>Logo</h1>
                     </div>
