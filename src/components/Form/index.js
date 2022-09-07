@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./styles.css";
 import useForm from "./useForm";
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Form() {
     let {
@@ -20,7 +20,8 @@ export default function Form() {
         setName,
         setPhone,
         submitForm,
-    } = useForm();
+    } = useForm(toast);
+
     
     return (
         <form className="form-container">
@@ -88,6 +89,7 @@ export default function Form() {
                 }}
                 type="submit"
             />
+            <ToastContainer className="toast-container__"/>
         </form>
     );
 }

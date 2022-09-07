@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import useSubscription from "../../hooks/useSubscription";
 
+
 let nameExp =
 /^[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]+$/u;
 
@@ -10,7 +11,7 @@ let emailExp =
 let phoneExp =
 /[\(]?[\+]?(\d{2}|\d{3})[\)]?[\s]?((\d{6}|\d{8})|(\d{3}[\*\.\-\s]){3}|(\d{2}[\*\.\-\s]){4}|(\d{4}[\*\.\-\s]){2})|\d{8}|\d{10}|\d{12}/;
 
-function useForm() {
+function useForm(toast) {
 let [name, setName] = useState("");
 let [lastName, setLastName] = useState("");
 let [email, setEmail] = useState("");
@@ -21,6 +22,8 @@ let [errorEmail, setErrorEmail] = useState(false);
 let [errorPhone, setErrorPhone] = useState(false);
 let [submited, setSubmited] = useState(false);
 const { subscribe } = useSubscription();
+const notifySuccess = () => toast("Form successfully complete!");
+const notifyUnsuccess = (error) => toast(`Form was not successfully complete: ${error}`);
 
 useEffect(() => {
     if (submited) {
@@ -70,8 +73,8 @@ let submitForm = () => {
     if (error) return;
     else {
         subscribe({ email, lastname: lastName, phone, firstname: name })
-            .then((res)=> console.log("Todo con exito"))
-            .catch(err => console.log(err.message));
+            .then((res)=> notifySuccess())
+            .catch(err => notifyUnsuccess(err.message));
     }
 };
 
